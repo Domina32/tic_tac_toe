@@ -1,0 +1,9 @@
+.sudokuRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.sudokuBoard {
+  display: flex;
+  flex-direction: column;
+}
