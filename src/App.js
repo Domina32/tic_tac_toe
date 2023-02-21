@@ -1,5 +1,5 @@
 import styles from "./app.module.css";
-import Button from "./components/Button/Button";
+import Button from "./components/Sudoku/Button/Button";
 import Sudoku from "./components/Sudoku/Sudoku";
 
 function App() {
