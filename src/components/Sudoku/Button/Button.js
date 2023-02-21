@@ -1,8 +1,17 @@
 import React from "react";
 import styles from "./button.module.css";
 
-const Button = ({ newGame }) => {
-  return <button className={styles.button}>NEW GAME</button>;
+const Button = ({ newGameFlag }) => {
+  return (
+    <button
+      className={styles.button}
+      onClick={() => {
+        newGameFlag = true;
+      }}
+    >
+      NEW GAME
+    </button>
+  );
 };
 
 export default Button;
