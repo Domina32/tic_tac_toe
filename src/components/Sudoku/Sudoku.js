@@ -4,11 +4,10 @@ import styles from "./sudoku.module.css";
 import React from "react";
 
 const Sudoku = () => {
-  const [squares, setSquares] = React.useState(Array(3).fill(Array(3).fill(null)));
-  const [globalSquareText, setGlobalSquareText] = React.useState("O");
+  const [squares, setSquares] = React.useState(Array(3).fill(Array(3).fill("O")));
 
   const handleClick = ()=>{
-    setGlobalSquareText("");
+    setSquares(Array(3).fill(Array(3).fill("")));
   }
 
   return (
@@ -17,7 +16,7 @@ const Sudoku = () => {
         {squares.map((sublist) => (
           <div className={styles.sudokuRow}>
             {sublist.map((square) => (
-              <SudokuSquare symbol={globalSquareText}/>
+              <SudokuSquare symbol={square}/>
             ))}
           </div>
         ))}
