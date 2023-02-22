@@ -1,15 +1,14 @@
 import React from "react";
 import styles from "./button.module.css";
 
-const Button = ({ newGameFlag }) => {
+const Button = ({onClick, children}) => {
+
   return (
     <button
       className={styles.button}
-      onClick={() => {
-        newGameFlag = true;
-      }}
+      onClick={onClick}
     >
-      NEW GAME
+      {children}
     </button>
   );
 };
